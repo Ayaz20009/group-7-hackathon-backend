@@ -1,4 +1,4 @@
-# Get Started - Hackathon
+# Prerequisites
 
 ## 1. Install `mongodb-realm-cli`
 
@@ -18,6 +18,10 @@ UI](https://cloud.mongodb.com/?tck=docs_realm).
 > ⚠️ Sync requires MongoDB 4.4 or above. Be sure to select at least MongoDB
 > version 4.4 when building your cluster!
 
+Log the name of your cluster as you will need it for a future step.  Example was created using "hackathon" as shown below.
+
+![](AtlasClusterName.png)
+
 ## 3. Create an API Key and authenticate the CLI
 
 To authenticate with the `realm-cli`, you must create an API key with **Project
@@ -30,15 +34,47 @@ for more information.
 Once created, pass the API keys to `realm-cli login` to log in:
 
 ```bash
-realm-cli login --api-key=[public API key] --private-api-key=[private API key]
+realm-cli login --api-key=[PUBLIC API KEY] --private-api-key=[PRIVATE API KEY]
 ```
 
-## 4. Import the Realm backend app
+# Steps to Deploy Realm App
+
+## 1. Clone Repository
+
+Clone the repository 
+
+```bash
+git clone https://github.com/Ayaz20009/group-7-hackathon-backend.git
+cd realm-tutorial-backend
+```
+
+## 2. Update Config File
+
+Update the `data_sources/mongodb-atlas/config.json` file with your MongoDB Atlas cluster information.  
+
+```bash
+vim data_sources/mongodb-atlas/config.json
+```
+Example File: 
+
+```json
+{
+    "name": "mongodb-atlas",
+    "type": "mongodb-atlas",
+    "config": {
+        "clusterName": "[YOUR CLUSTER NAME]",
+        "readPreference": "primary",
+        "wireProtocolEnabled": false
+    },
+    "version": 1
+}
+```
+
+## 3. Import the Realm backend app
 
 If logged in successfully, you can now import the app:
 
 ```bash
-cd realm-tutorial-backend
 realm-cli push
 ```
 
@@ -54,5 +90,3 @@ widget on the [docs site](http://www.mongodb.com/docs/realm/tutorial).
 This repo is automatically derived from our main docs repo. If you'd like to
 submit a pull request -- thanks! -- please feel free to do so at
 https://github.com/mongodb/docs-realm/ (see the tutorial/ subdirectory).
-
-

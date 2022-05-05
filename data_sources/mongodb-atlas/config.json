@@ -2,7 +2,7 @@
     "name": "mongodb-atlas",
     "type": "mongodb-atlas",
     "config": {
-        "clusterName": "hackathon-demo",
+        "clusterName": "[YOUR CLUSTER NAME]",
         "readPreference": "primary",
         "wireProtocolEnabled": false
     },
