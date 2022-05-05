@@ -1,4 +1,14 @@
-# Prerequisites
+# Tasktracker Purpose
+
+Tasktracker is meant to show how multi-tenancy can be achieved in a SaaS product using a single MongoDB Atlas application as a backend.  It looks to acheive a way for you to manage daily tasks that can be shared with multiple users across a team or organization keeping permissions seperated.  
+
+Sample link can be found [here](https://tasktracker-clyob.mongodbstitch.com/). 
+
+# High Level Architecture
+
+![](B2BMulti-tenancyAccessControl.png)
+
+# Setup Prerequisites
 
 ## 1. Install `mongodb-realm-cli`
 
