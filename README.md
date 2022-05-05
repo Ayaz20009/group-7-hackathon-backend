@@ -106,6 +106,29 @@ Follow the prompts and wait for the app to deploy.
 
 Congratulations! You now have a working MongoDB Realm backend with Sync enabled.
 
+## 4. Configure Front End Applicataion
+
+Once the backend is setup you can start the frontend app locally on your computer.  Below are the commands required. 
+
+```bash
+cd frontend
+npm install 
+npm start
+```
+The application should start in your default browser.  You may need to run in incognito for the demo!  If this is the case just copy and paste ther URL in a new window. 
+
+# Execution
+
+## 1. Create a User
+
+![](TasktrackerLogin.png)
+
+## 2. Create a Task
+
+![](TasktrackerTaskCreation.png)
+
+# Conclusion
+
 ## Issues & Pull Requests
 
 If you find an issue or have a suggestion, please let us know using the feedback
@@ -114,8 +137,3 @@ widget on the [docs site](http://www.mongodb.com/docs/realm/tutorial).
 This repo is automatically derived from our main docs repo. If you'd like to
 submit a pull request -- thanks! -- please feel free to do so at
 https://github.com/mongodb/docs-realm/ (see the tutorial/ subdirectory).
-
-
-## Execution
-
-## Conclusion
