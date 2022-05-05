@@ -10,17 +10,17 @@ Often, the problem for customers is that they want to mange access control to th
 
 So a novel way to solve this requirement where Atlas manages the customer access control to data at the document level is to leverage Realm Authentication which natively allows you to not only create users and authenticate them but also utilise the tenant_ids in the documents to enable the authorisation at the document level.
 
+### High Level Architecture
+
+![](B2BMulti-tenancyAccessControl.png)
+
 ## Preparation
 
-# Tasktracker Purpose
-
-Tasktracker is meant to show how multi-tenancy can be achieved in a SaaS product using a single MongoDB Atlas application as a backend.  It looks to acheive a way for you to manage daily tasks that can be shared with multiple users across a team or organization keeping permissions seperated.  
+To help prove this solution we built a Tasktracker app to show how multi-tenancy can be achieved in a SaaS product using a single MongoDB Atlas application as a backend. The app allows business users to manage daily tasks that can be shared with multiple other users across a team or organization keeping permissions seperated.
 
 Sample link can be found [here](https://tasktracker-clyob.mongodbstitch.com/). 
 
-# High Level Architecture
 
-![](B2BMulti-tenancyAccessControl.png)
 
 # Setup Prerequisites
 
